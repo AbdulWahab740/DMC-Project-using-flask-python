@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advisor Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        table {
+            border-collapse: collapse; /* Ensures borders don't double up */
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid black; /* Adds a border around each cell */
+            padding: 5px; /* Adds space inside each cell */
+            text-align: left; /* Aligns text to the left */
+        }
+        nav{
+            background-color:#03396d;
+            color: goldenrod;
+            width: 100%;
+            height: 135px;
+        }
+        nav .container{
+            margin: 0px -20px;
+            padding: 30px 40px;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <div class="container ">
+                    <p style="font-size:50px;font-family:fantasy">Pending Requests for Advisor</p>
+                </div>
+            </ul>
+        </nav>
+    </header>
+    <div class="container mt-4">
+        {% if students %}
+        <table>
+            <thead>
+                <tr>
+                    <th>Applicant</th>
+                    <th>Email</th>
+                    <th>Degree</th>
+                    <th>CGPA</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for student in students %}
+                <tr>
+                    <td>{{ student.applicant }}</td>
+                    <td>{{ student.father }}</td>
+                    <td>{{ student.email }}</td>
+                    <td>{{ student.CNIC }}</td>
+                    <td>{{ student.faculty }}</td>
+                    <td>{{ student.yearPassing }}</td>
+                    <td>{{ student.degree }}</td>
+                    <td>{{ student.regd }}</td>
+                    <td>{{ student.cgpa }}</td>
+                    <td>
+                        <form action="{{ url_for('adv_approve', id=student.id) }}" method="post" style="display:inline;">
+                            <button type="submit" class="btn btn-success">Approve</button>
+                        </form>
+                        <form action="{{ url_for('adv_reject', id=student.id) }}" method="post" style="display:inline;">
+                            <button type="submit" class="btn btn-danger">Reject</button>
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+    <p style="font-size: 40px; margin-left:-300px">No pending students found.</p>
+    {% endif %}
+        
+    </div>
+</body>
+</html>

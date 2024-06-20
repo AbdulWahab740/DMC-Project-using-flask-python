@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dean Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        table {
+            border-collapse: collapse; /* Ensures borders don't double up */
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid black; /* Adds a border around each cell */
+            padding: 5px; /* Adds space inside each cell */
+            text-align: left; /* Aligns text to the left */
+        }
+        nav{
+            background-color:#03396d;
+            color: goldenrod;
+            width: 100%;
+            height: 135px;
+        }
+        nav .container{
+            margin: 0px -20px;
+            padding: 30px 40px;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <div class="container ">
+                    <p style="font-size:50px;font-family:fantasy">{{ student.applicant }}'s  -  Acceptance Status </p>
+                </div>
+            </ul>
+        </nav>
+    </header>
+    {% if student %}
+            <div class="mt-4">
+                <p style="font-size: 40px; margin-left:50px">Librarian Status: {{ student.Lib_status }}</p>
+            </div>
+           
+        {% endif %}
+
+        {% if student %}
+            <div class="mt-4">
+                <p style="font-size: 40px; margin-left:50px">Advisor Status: {{ student.adv_status }}</p>
+            </div>
+        {% endif %}
+
+        
+        {% if student %}
+            <div class="mt-4">
+                <p style="font-size: 40px; margin-left:50px">DSA Status: {{ student.dsa_status }}</p>
+            </div>
+        {% endif %}
+            
+        {% if student %}
+        <div class="mt-4">
+            <p style="font-size: 40px; margin-left:50px">Dean Status: {{ student.dean_status }}</p>
+        </div>
+        {% endif %} 
+
+       
+    </div>
+</body>
+</html>

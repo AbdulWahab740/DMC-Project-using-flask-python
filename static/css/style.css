@@ -1,0 +1,193 @@
+h1{
+    /* justify-content: center; */
+    font: underline;
+    text-align: center;
+    padding-top: 30px;
+    color:white;
+
+}
+
+.container h2 {
+    font: underline;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white; 
+    margin: 50 10 50 ;
+    padding-top: 130px;
+}
+
+.container p {
+  font: underline;
+  font-size: 17px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  
+  color: white; 
+  margin: 50 10 50 ;
+}
+
+
+.container {
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    top: 50%;
+    left: 50%;
+    height: 400px;
+    transform: translate(-50%, -50%);
+    background-color: grey;
+    text-align: center;
+    border-radius: 20px;
+    overflow: hidden;
+    float: left;
+  }
+
+body{
+    background-color: rgb(80, 168, 184);
+}
+.container2 p{
+  margin: 10px 10px;
+  text-align: right;
+  float: left;
+}
+.container2 {
+  padding-top: 22px;
+  display: inline-flex;
+}
+.container2 button.student {
+    background-color: white;
+    border-style: solid;
+    border-color: aliceblue;
+    margin-left: -30px;
+    /* margin-top: 20px; */
+    color: rgb(148, 128, 16);
+    padding: 15px 25px;
+    text-align: center;
+    font-size: 13;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 20px;
+  }
+
+.container2 button.admin {
+  background-color: white;
+    border-style: solid;
+    border-color: aliceblue;
+    margin-left: -110;
+    /* margin-top: 20px; */
+    color: rgb(148, 128, 16);
+    padding: 15px 25px;
+    text-align: center;
+    font-size: 13;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 20px;
+  }
+.container button a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit button's text color */
+  }
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins&display=swap');
+
+  * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box
+  }
+  
+  body {
+      background-color: #eee;
+      height: 100vh;
+      font-family: 'Poppins', sans-serif;
+      background-image: url("https://scontent.flhe2-2.fna.fbcdn.net/v/t1.6435-9/91285734_1609310225893098_1010355652968579072_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=5f2048&_nc_ohc=c0SljDKsCIYQ7kNvgFDo3wM&_nc_ht=scontent.flhe2-2.fna&oh=00_AYDgMnSvpYlNRghqt6Yzl7pWPEemaaHVI7dGC9m--UuGLw&oe=666DA3D4");
+      background-repeat: no-repeat;background-size: 100% 100%
+  }
+  
+  .wrapper {
+      max-width: 500px;
+      border-radius: 10px;
+      margin-left: 450px;
+      margin-top: 50px;
+      padding: 55px 70px;
+  }
+  .logo img{
+    width: 4.5vw;
+    height: 9vh;
+    margin-top:2.2px ;
+    margin-left: 20px;
+}
+  .h3  {
+      font-family: 'Kaushan Script', cursive;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #2977c0;
+      font-style: italic
+  }
+  .h2{
+    font-family:  'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #03396d;
+      padding-bottom: 10px;
+    
+  }
+  
+  .h4,  .h4 button{
+      font-family: 'Poppins', sans-serif
+  }
+  
+  .input-field {
+      border-radius: 5px;
+      padding: 5px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      border: 1px solid #2977c0;
+      color: #2977c0
+  }
+ 
+  .input-field:hover {
+      color: #7b4ca0;
+      border: 1px solid #7b4ca0
+  }
+  
+  input {
+      border: none;
+      outline: none;
+      box-shadow: none;
+      width: 100%;
+      padding: 0px 2px;
+      font-family: 'Poppins', sans-serif
+  }
+  
+  .fa-eye-slash.btn {
+      border: none;
+      outline: none;
+      box-shadow: none
+  }
+  
+  a {
+      text-decoration: none;
+      color: #2977c0;
+      font-weight: 700
+  }
+  
+  a:hover {
+      text-decoration: none;
+      color: #7b4ca0
+  }
+  
+
+
+
+  
+  .btn.btn-block {
+      border-radius: 20px;
+      background-color: #2977c0;
+      color: #fff
+  }
+  
+  .btn.btn-block:hover {
+      background-color: #55268be0
+  }
